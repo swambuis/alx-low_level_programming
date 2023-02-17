@@ -2,11 +2,11 @@
 include < unistd.h >
 /**
  * main - c program that prints a line to the standard error
- * Return 1 (Success)
+ * Return: Always 0 (Success)
 */
 int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
 }
 }
