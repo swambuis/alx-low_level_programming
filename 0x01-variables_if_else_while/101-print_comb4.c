@@ -2,7 +2,7 @@
 /**
  * main - entry point
  * description - combination of three digits
- */
+*/
 int main(void)
 {
 	int c;
