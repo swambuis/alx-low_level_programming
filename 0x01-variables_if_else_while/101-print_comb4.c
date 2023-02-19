@@ -2,6 +2,7 @@
 /**
  * main - entry point
  * description - combination of three digits
+ * Return: 0
 */
 int main(void)
 {
