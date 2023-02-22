@@ -2,7 +2,7 @@
 
 /**
  * main - prints the sum of even fib numbers
- * less than 4000000
+ * less than 4000000.
  * Return: Nothing!
  */
 
