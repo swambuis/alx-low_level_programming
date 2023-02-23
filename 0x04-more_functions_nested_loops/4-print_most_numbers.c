@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_most_numbers - print numbers since 0 upto 9 
+ * print_most_numbers - print numbers since 0 upto 9
  * exclude 2 and 4
  * Return: the numbers since 0 to 9
  */
@@ -11,7 +11,7 @@ void print_most_numbers(void)
 int x = 0;
 for (; x <= 9; x++)
 {
-if (x ==2 || x == 4)
+if (x == 2 || x == 4)
 {
 continue;
 }
