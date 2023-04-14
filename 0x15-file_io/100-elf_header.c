@@ -1,3 +1,5 @@
+#include <elf.h>
+#include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
@@ -295,20 +297,18 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(98);
 	}
 
-	Elf_Header* elf_header = /* pointer to the ELF header */;
-check_elf(elf_header->identifier);
-printf("ELF Header:\n");
-print_magic_number(elf_header->identifier);
-print_file_class(elf_header->identifier);
-print_data_encoding(elf_header->identifier);
-print_file_version(elf_header->identifier);
-print_os_abi(elf_header->identifier);
-print_abi_version(elf_header->identifier);
-print_file_type(elf_header->type, elf_header->identifier);
-print_entry_point(elf_header->entry_point, elf_header->identifier);
+	check_elf(header->e_ident);
+	printf("ELF Header:\n");
+	print_magic(header->e_ident);
+	print_class(header->e_ident);
+	print_data(header->e_ident);
+	print_version(header->e_ident);
+	print_osabi(header->e_ident);
+	print_abi(header->e_ident);
+	print_type(header->e_type, header->e_ident);
+	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
 	close_elf(o);
 	return (0);
 }
-
